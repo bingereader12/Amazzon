@@ -8,7 +8,7 @@ if(isset($_POST['submit'])){
   $pid=$_POST['pid'];
   $q=$_POST['quantity'];
 
-  $select = "SELECT * FROM cart WHERE pid='$pid'";
+  $select = "SELECT * FROM cart WHERE pid='$pid' AND uid='$uid'";
   $as = mysqli_query($conn, $select);
 
   $r="SELECT * FROM products WHERE pid='$pid'";
