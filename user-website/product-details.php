@@ -15,7 +15,7 @@ $t = mysqli_fetch_array($a);
 if(isset($_POST['btn-send'])){
   $q = $_POST['quantity'];
 
-  $select = "SELECT * FROM cart WHERE pid='$pid'";
+  $select = "SELECT * FROM cart WHERE pid='$pid' AND uid='$uid'";
   $as = mysqli_query($conn, $select);
   if(mysqli_num_rows($as) > 0){
     $at=mysqli_fetch_array($as);
